@@ -6,4 +6,4 @@ SupportedVersions: 3.80
 Author: Ilya Verbitskiy
 DisplayOrder: 1
 FileName: Nop.Plugin.Development.ThemesPlusPlus.dll
-Description: nopCommerce plugin to support child themes. Icons made by Freepik (http://www.flaticon.com/authors/freepik) from www.flaticon.com is licensed by Creative Commons BY 3.0.
+Description: nopCommerce plugin to support child themes
