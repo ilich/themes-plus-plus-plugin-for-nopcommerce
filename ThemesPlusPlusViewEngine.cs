@@ -110,10 +110,10 @@ namespace Nop.Plugin.Development.ThemesPlusPlus
         {
             var provider = EngineContext.Current.Resolve<IThemeProvider>();
             var parentThemes = new List<string>();
-            var theme = provider.GetThemeConfiguration(currentTheme) as ThemePlusPlusConfiguration;
+            var theme = provider.GetThemeConfiguration(currentTheme) as ThemesPlusPlusConfiguration;
             while (theme.ParentTheme != null)
             {
-                theme = provider.GetThemeConfiguration(theme.ParentTheme) as ThemePlusPlusConfiguration;
+                theme = provider.GetThemeConfiguration(theme.ParentTheme) as ThemesPlusPlusConfiguration;
                 if (theme == null)
                 {
                     // Parent theme is not found

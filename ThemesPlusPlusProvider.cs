@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -9,13 +8,13 @@ using Nop.Web.Framework.Themes;
 
 namespace Nop.Plugin.Development.ThemesPlusPlus
 {
-    public class ThemePlusPlusProvider : IThemeProvider
+    public class ThemesPlusPlusProvider : IThemeProvider
     {
         private readonly IList<ThemeConfiguration> _themeConfigurations = new List<ThemeConfiguration>();
 
         private readonly bool _isPluginEnabled;
 
-        public ThemePlusPlusProvider(IPluginFinder pluginFinder)
+        public ThemesPlusPlusProvider(IPluginFinder pluginFinder)
         {
             var plugin = pluginFinder.GetPluginDescriptorBySystemName("Devemopment.ThemesPlusPlus");
             _isPluginEnabled = plugin?.Installed == true;
@@ -64,7 +63,7 @@ namespace Nop.Plugin.Development.ThemesPlusPlus
             var doc = new XmlDocument();
             doc.Load(themeConfigFile.FullName);
             var themeConfig = _isPluginEnabled
-                ? new ThemePlusPlusConfiguration(themeDirectory.Name, themeDirectory.FullName, doc)
+                ? new ThemesPlusPlusConfiguration(themeDirectory.Name, themeDirectory.FullName, doc)
                 : new ThemeConfiguration(themeDirectory.Name, themeDirectory.FullName, doc);
             return themeConfig;
         }

@@ -12,7 +12,7 @@ namespace Nop.Plugin.Development.ThemesPlusPlus
 
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
         {
-            builder.RegisterType<ThemePlusPlusProvider>().As<IThemeProvider>().InstancePerLifetimeScope();
+            builder.RegisterType<ThemesPlusPlusProvider>().As<IThemeProvider>().InstancePerLifetimeScope();
         }
     }
 }
